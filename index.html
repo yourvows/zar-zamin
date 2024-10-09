@@ -48,21 +48,36 @@
   <main class="bg-[#F8F8F8] pb-[50px] lg:pb-[100px]">
     <div>
     <div class="container grid grid-cols-1 items-center lg:grid-cols-2 gap-[40px] lg:gap-[100px] py-[40px] lg:py-[80px]">
-      <div>
+      <div class="max-sm:flex items-center justify-center flex-col">
         <p class="text-[32px] lg:text-[56px] mb-[29px] text-center lg:text-start font-sora font-medium leading-[40px] lg:leading-[71px]">
           <span class="text-green font-bold">Zarzamin<br>Komplekslari bilan</span>
           <br>
           <span class="text-yellow font-bold">3-Kundan boshlab</span>
           <span class="font-sans">Xusnbuzar va dog'lardan halos bo'lishini boshlang</span>
         </p>
-        <div class="flex flex-col lg:flex-row gap-[14px]">
+        <div class="hidden lg:flex flex-col lg:flex-row gap-[14px]">
           <img src="assets/image.png" class="rounded-[20px]  bg-cover" alt="image">
           <img src="assets/image_2.png" class="rounded-[20px]  bg-cover" alt="image">
           <img src="assets/image_3.png" class="rounded-[20px]  bg-cover" alt="image">
         </div>
+        <div class="block lg:hidden bg-white w-[clamp(358px,50vw,494px)] p-[15px] rounded-[30px]">
+          <img src="assets/product.png" class="rounded-[20px]" alt="product">
+
+          <div class="pt-[20px] px-[17px]">
+            <p class="font-bold text-[26px] leading-[31px]">Mini kompleks</p>
+            <h2 class="font-bold text-[42px] leading-[53px] text-green pb-[42px]">300 000 So’m</h2>
+            <button class="active:scale-90 transition-all duration-300 p-[15px] w-full rounded-[30px] text-white leading-[19px] mb-[15px] bg-green">Buyurtma berish</button>
+            <p class="font-semibold font-sora text-[20px] leading-[25px] text-center">Narxi kompleksdagi mahsulotlar soniga qarab belgilanadi.</p>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center justify-center">
-        <div class="bg-white w-[clamp(358px,50vw,494px)] p-[15px] rounded-[30px]">
+      <div class="block lg:flex items-center justify-center">
+        <div class="lg:hidden flex flex-col lg:flex-row gap-[14px]">
+          <img src="assets/image.png" class="rounded-[20px] max-sm:h-[216px] object-cover" alt="image">
+          <img src="assets/image_2.png" class="rounded-[20px] max-sm:h-[216px] object-cover" alt="image">
+          <img src="assets/image_3.png" class="rounded-[20px] max-sm:h-[216px] object-cover" alt="image">
+        </div>
+        <div class="hidden lg:block bg-white w-[clamp(358px,50vw,494px)] p-[15px] rounded-[30px]">
           <img src="assets/product.png" class="rounded-[20px]" alt="product">
 
           <div class="pt-[20px] px-[17px]">
@@ -95,6 +110,13 @@
             <img src="assets/gift.svg">
             <span class="font-semibold text-[20px] text-white tracking-[0.075em] leading-[150%]">Hoziroq buyurtma bering va bitta mahsulotni sovg'aga oling!</span>
           </button>
+        </div>
+        <div class="flex lg:hidden gap-[30px] items-center flex-col justify-center mt-[91px]">
+          <h1 class="font-bold text-[30px] leading-[36px]">Videolar</h1>
+          <iframe class="rounded-[20px]" width="358" height="485" src="https://www.youtube.com/embed/XU58px3OGMo?si=zvBSqClxT5e7mTJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe class="rounded-[20px]" width="358" height="485" src="https://www.youtube.com/embed/XU58px3OGMo?si=zvBSqClxT5e7mTJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe class="rounded-[20px]" width="358" height="485" src="https://www.youtube.com/embed/XU58px3OGMo?si=zvBSqClxT5e7mTJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
       </div>
     </div>
