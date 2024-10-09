@@ -26,17 +26,78 @@
         }
       },
       fontFamily: {
-        'sans': ['"Inria Sans"', 'sans-serif']
+        'sans': ['"Inria Sans"', 'sans-serif'],
+        'sora': ['"Sora"', 'sans-serif']
     }
     }
   }
 </script>
 <body>
-  <header class="container flex justify-between items-center">
-    <img src="assets/logo.png" alt="logo">
-    <button class="p-[15px] rounded-[30px] text-white leading-[19px] bg-green">Bog’lanish uchun</button>
+  <header class="container flex py-[22.5px] justify-between items-center">
+    <nav class="flex items-center gap-[98px]">
+      <img src="assets/logo.png" alt="logo">
+      <ul class="hidden lg:flex gap-[31px]">
+        <li class="hover:underline">Bosh sahifa</li>
+        <li class="hover:underline">Malumotlar</li>
+        <li class="hover:underline">Mahsulotlar</li>
+        <li class="hover:underline">Biz Haqimizda</li>
+      </ul>
+    </nav>
+    <button class="hidden lg:block active:scale-90 transition-all duration-300 p-[15px] rounded-[30px] text-white leading-[19px] bg-green">Bog’lanish uchun</button>
   </header>
-  <main></main>
-  <footer></footer>
+  <main class="bg-[#F8F8F8] pb-[50px] lg:pb-[100px]">
+    <div>
+    <div class="container grid grid-cols-1 items-center lg:grid-cols-2 gap-[40px] lg:gap-[100px] py-[40px] lg:py-[80px]">
+      <div>
+        <p class="text-[32px] lg:text-[56px] mb-[29px] text-center lg:text-start font-sora font-medium leading-[40px] lg:leading-[71px]">
+          <span class="text-green font-bold">Zarzamin<br>Komplekslari bilan</span>
+          <br>
+          <span class="text-yellow font-bold">3-Kundan boshlab</span>
+          <span class="font-sans">Xusnbuzar va dog'lardan halos bo'lishini boshlang</span>
+        </p>
+        <div class="flex flex-col lg:flex-row gap-[14px]">
+          <img src="assets/image.png" class="rounded-[20px]  bg-cover" alt="image">
+          <img src="assets/image_2.png" class="rounded-[20px]  bg-cover" alt="image">
+          <img src="assets/image_3.png" class="rounded-[20px]  bg-cover" alt="image">
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <div class="bg-white w-[clamp(358px,50vw,494px)] p-[15px] rounded-[30px]">
+          <img src="assets/product.png" class="rounded-[20px]" alt="product">
+
+          <div class="pt-[20px] px-[17px]">
+            <p class="font-bold text-[26px] leading-[31px]">Mini kompleks</p>
+            <h2 class="font-bold text-[42px] leading-[53px] text-green pb-[42px]">300 000 So’m</h2>
+            <button class="active:scale-90 transition-all duration-300 p-[15px] w-full rounded-[30px] text-white leading-[19px] mb-[15px] bg-green">Buyurtma berish</button>
+            <p class="font-semibold font-sora text-[20px] leading-[25px] text-center">Narxi kompleksdagi mahsulotlar soniga qarab belgilanadi.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+      <div class="container">
+        <div class="bg-green rounded-[30px] py-[25px] p-[15px] lg:pl-[70px] lg:pr-[100px] grid grid-cols-1 lg:grid-cols-2 gap-[33px] lg:gap-[100px] lg:py-[80px]">
+          <div class="text-center lg:text-start">
+            <h1 class="font-bold text-[36px] leading-[43px] text-white mb-[22px]">Tez va oson buyurtma bering!</h1>
+            <p class="font-normal mb-[29px] text-[18px] leading-[150%] text-white">Ma'lumotlaringizni kiritib, mahsulotingizni hoziroq buyurtma bering. Biz siz bilan tezda bog‘lanamiz va mahsulotlarni bepul yetkazib beramiz.</p>
+            <button class="hidden lg:flex bg-white/10 py-1 px-3 rounded-[43px] active:scale-90 transition-all duration-300">
+              <img src="assets/gift.svg">
+              <span class="font-semibold text-[20px] text-white tracking-[0.075em] leading-[150%]">Hoziroq buyurtma bering va bitta mahsulotni sovg'aga oling!</span>
+            </button>
+          </div>
+          <div class="flex flex-col gap-[14px]">
+            <input class="p-[28px] rounded-[10px] outline-none" type="text" placeholder="Ismingiz">
+            <input class="p-[28px] rounded-[10px] outline-none" type="text" maxlength="9" placeholder="Raqamingiz">
+            <button class="bg-white active:scale-90 transition-all duration-300 p-[28px] font-bold leading-[24px] text-[20px] rounded-[10px]">Buyurtma berish</button>
+          </div>
+          <button class="flex lg:hidden rounded-[10px] flex-col items-center bg-white/10 py-1 px-3 active:scale-90 transition-all duration-300">
+            <img src="assets/gift.svg">
+            <span class="font-semibold text-[20px] text-white tracking-[0.075em] leading-[150%]">Hoziroq buyurtma bering va bitta mahsulotni sovg'aga oling!</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
