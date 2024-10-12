@@ -33,11 +33,6 @@
     }
   }
 </script>
-<script type="module">
-  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-
-  const swiper = new Swiper()
-</script>
 <body>
 <header class="container flex py-[22.5px] justify-between items-center">
   <nav class="flex items-center gap-[98px]">
@@ -214,15 +209,26 @@
       </div>
       <div class="flex lg:hidden gap-[30px] items-center flex-col justify-center mt-[91px]">
         <h1 class="font-bold text-[30px] leading-[36px]">Videolar</h1>
-        <video width="385" height="485"  class="object-contain rounded-[20px]" controls>
-          <source src="https://s3.modme.uz/modme-dev/340616106256902921.mp4">
-        </video>
-        <video width="385" height="485" class=" object-contain rounded-[20px]" controls>
-          <source src="https://s3.modme.uz/modme-dev/7399333005038151285.mp4">
-        </video>
-        <video width="385" height="485" class=" object-contain rounded-[20px]" controls>
-          <source src="https://s3.modme.uz/modme-dev/IMG_0107.mp4">
-        </video>
+        <div class="relative">
+          <video id="videoPlayer" width="385" height="485"  class="object-contain rounded-[20px]" controls>
+            <source id="videoSource" src="https://s3.modme.uz/modme-dev/340616106256902921.mp4">
+          </video>
+        </div>
+
+        <div class="flex justify-between gap-[15px] px-4 py-2">
+          <button id="prevBtn" class="bg-gray-200 flex items-center justify-center w-[51px] h-[51px] rounded-full hover:bg-gray-300">
+            <svg class="h-6 w-6 hover:fill-white"  viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.499998 7.99997C0.506081 7.34233 0.771053 6.71359 1.2375 6.24997L6.6 0.874966C6.8342 0.642152 7.15102 0.511475 7.48125 0.511475C7.81148 0.511475 8.1283 0.642152 8.3625 0.874966C8.47966 0.99117 8.57265 1.12942 8.63611 1.28174C8.69957 1.43407 8.73225 1.59745 8.73225 1.76247C8.73225 1.92748 8.69957 2.09086 8.63611 2.24319C8.57265 2.39551 8.47966 2.53376 8.3625 2.64997L4.25 6.74997H16.75C17.0815 6.74997 17.3995 6.88166 17.6339 7.11608C17.8683 7.3505 18 7.66845 18 7.99997C18 8.33149 17.8683 8.64943 17.6339 8.88385C17.3995 9.11827 17.0815 9.24997 16.75 9.24997H4.25L8.3625 13.3625C8.59788 13.5962 8.73077 13.9138 8.73194 14.2455C8.73312 14.5773 8.60247 14.8958 8.36875 15.1312C8.13503 15.3666 7.81737 15.4995 7.48567 15.5007C7.15396 15.5018 6.83538 15.3712 6.6 15.1375L1.2375 9.76247C0.768013 9.29578 0.502789 8.66194 0.499998 7.99997Z" fill="#222222"/>
+            </svg>
+          </button>
+
+
+          <button id="nextBtn" class="bg-gray-200 flex items-center justify-center w-[51px] h-[51px] rounded-full text-white hover:bg-gray-300">
+            <svg class="w-6 h-6 hover:fill-white" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 7.99997C17.4939 7.34233 17.2289 6.71359 16.7625 6.24997L11.4 0.874966C11.1658 0.642152 10.849 0.511475 10.5188 0.511475C10.1885 0.511475 9.8717 0.642152 9.6375 0.874966C9.52034 0.99117 9.42735 1.12942 9.36389 1.28174C9.30043 1.43407 9.26775 1.59745 9.26775 1.76247C9.26775 1.92748 9.30043 2.09086 9.36389 2.24319C9.42735 2.39551 9.52034 2.53376 9.6375 2.64997L13.75 6.74997H1.25C0.918479 6.74997 0.600537 6.88166 0.366117 7.11608C0.131696 7.3505 0 7.66844 0 7.99997C0 8.33149 0.131696 8.64943 0.366117 8.88385C0.600537 9.11827 0.918479 9.24997 1.25 9.24997H13.75L9.6375 13.3625C9.40212 13.5962 9.26923 13.9138 9.26806 14.2455C9.26688 14.5773 9.39753 14.8958 9.63125 15.1312C9.86497 15.3666 10.1826 15.4995 10.5143 15.5007C10.846 15.5018 11.1646 15.3712 11.4 15.1375L16.7625 9.76247C17.232 9.29578 17.4972 8.66194 17.5 7.99997Z" fill="#222222"/>
+            </svg>
+          </button>
+        </div>
       </div>
       <div class="bg-green mt-3 rounded-[30px] lg:hidden py-[25px] p-[15px] lg:pl-[70px] lg:pr-[100px] grid grid-cols-1 lg:grid-cols-2 gap-[33px] lg:gap-[100px] lg:py-[80px]">
         <div class="text-center lg:text-start">
@@ -246,5 +252,35 @@
     </div>
   </div>
 </main>
+<script>
+  const videos = [
+    { src: 'https://s3.modme.uz/modme-dev/340616106256902921.mp4'},
+    { src: 'https://s3.modme.uz/modme-dev/7399333005038151285.mp4'},
+    { src: 'https://s3.modme.uz/modme-dev/IMG_0107.mp4' }
+  ];
+  let currentIndex = 0;
+
+  const videoPlayer = document.getElementById('videoPlayer');
+  const videoSource = document.getElementById('videoSource');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function updateVideo(index) {
+    videoSource.src = videos[index].src;
+    videoPlayer.load(); // Загружаем новое видео
+  }
+
+  // Обработчик клика на кнопку "Next"
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % videos.length; // Циклически переходим на следующее видео
+    updateVideo(currentIndex);
+  });
+
+  // Обработчик клика на кнопку "Prev"
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + videos.length) % videos.length; // Циклически переходим на предыдущее видео
+    updateVideo(currentIndex);
+  });
+</script>
 </body>
 </html>
