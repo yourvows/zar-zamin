@@ -50,7 +50,17 @@
 </header>
 <main>
     <div class="relative h-full bg-[#F8F8F8] lg:bg-transparent">
-        <!--        <div class="size-[128px] translate-x-[50%] translate-y-[50%] rounded-full bg-green absolute"></div>-->
+                <div class="size-[80px] lg:size-[116px] z-[3] flex outline-[1.25px] lg:outline-[2px]  outline-[#FFC358] outline-dashed outline-offset-[3.75px] justify-center items-center rounded-full bg-white absolute bottom-0  translate-y-[50%] left-1/2 transform -translate-x-1/2">
+                    <svg class="size-[20px] lg:size-[26px]" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.99999 17.125C8.75957 17.125 7.59499 16.643 6.71749 15.7655L0.736135 10.1714C0.593948 10.0373 0.520822 9.85724 0.520822 9.67713C0.520822 9.51057 0.580406 9.34536 0.703634 9.21536C0.958217 8.94182 1.38749 8.92828 1.66103 9.18286L7.65863 14.7932C8.29645 15.4296 9.12249 15.7722 9.99999 15.7722C10.8775 15.7722 11.7035 15.4296 12.3251 14.8094L18.3389 9.18422C18.6125 8.92963 19.0404 8.94317 19.2963 9.21672C19.5509 9.49026 19.5374 9.91817 19.2638 10.1741L13.2662 15.7844C12.405 16.6457 11.2391 17.1278 9.99999 17.1278L9.99999 17.125ZM10.459 10.1741L19.2611 2.04911C19.5347 1.79588 19.5523 1.36797 19.2991 1.09172C19.0458 0.81682 18.6179 0.80057 18.3417 1.0538L9.99863 8.75495L1.65561 1.0538C1.38072 0.799215 0.951448 0.816819 0.698219 1.09171C0.577698 1.22171 0.518112 1.38692 0.518112 1.55078C0.518112 1.73359 0.59124 1.91505 0.736135 2.04776L9.53822 10.1728C9.79822 10.4124 10.1977 10.4124 10.4577 10.1728L10.459 10.1741Z" fill="url(#paint0_linear_11_503)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_11_503" x1="9.99831" y1="0.873657" x2="9.99831" y2="17.1278" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#129E66"/>
+                                <stop offset="1" stop-color="#129B8D"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
         <div class="container flex flex-col lg:flex-row gap-[28px] lg:gap-[100px] pt-[20px] lg:pt-[77px] pb-[50px] lg:pb-[167px] items-center justify-between gap-[100px]">
             <img class="absolute hidden lg:block z-[-2] left-0" src="assets/bg-image.png" alt="bg-image">
             <img class="absolute hidden lg:block z-[-2] right-0" src="assets/bg-image_2.png" alt="bg-image-2">
@@ -275,6 +285,27 @@
             </div>
         </div>
     </div>
+    <div class="container hidden lg:block">
+        <h1 class="font-bold text-[32px] text-center mb-[45px] mt-[75px]">Afzalliklarimiz</h1>
+        <div class="flex flex-wrap justify-center grid-cols-2 gap-x-[30px] gap-y-[20px]">
+            <div class="bg-[#F3F3F3] w-[585px] pl-[147px] font-semibold text-[20px] h-[150px] rounded-[10px] flex justify-start items-center">
+                3-kundan <br>
+                boshlab tezkor natija
+            </div>
+            <div class="bg-[#F3F3F3] w-[585px] font-semibold text-[20px] h-[150px] rounded-[10px] flex justify-start pl-[147px] items-center">
+                Bepul yetkazib berish
+            </div>
+            <div class="bg-[#F3F3F3] w-[585px] font-semibold text-[20px] h-[150px] rounded-[10px] flex justify-start pl-[147px] items-center">
+                Kumush zarrachalari qo'shilgan <br> noyob mahsulotlar
+            </div>
+            <div class="bg-[#F3F3F3] w-[585px] font-semibold text-[20px] h-[150px] rounded-[10px] flex justify-start pl-[147px] items-center">
+                Tabiiy mahsulotlar
+            </div>
+            <div class="bg-[#F3F3F3] w-[585px] font-semibold text-[20px] h-[150px] rounded-[10px] flex justify-start pl-[147px] items-center">
+                Qo'llash bo'yicha mutaxasislardan <br> tavsiyalar
+            </div>
+        </div>
+    </div>
     <div class="flex gap-[30px] items-center flex-col justify-center mt-[91px]">
         <h1 class="font-bold text-[30px] leading-[36px]">Videolar</h1>
         <div class="relative">
@@ -342,7 +373,7 @@
         currentIndex = (currentIndex + 1) % videos.length; // Циклически переходим на следующее видео
         updateVideo(currentIndex);
     });
-    
+
     prevBtn.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + videos.length) % videos.length; // Циклически переходим на предыдущее видео
         updateVideo(currentIndex);
